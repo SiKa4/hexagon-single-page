@@ -7,11 +7,6 @@ $colorWhite: #FFFFFF;
 $colorPrimary: #3C89E7;
 
 :root {
-  --primary-btn: #3C89E7;
-  --low-brightness: #F6F6FA;
-  --hover-primary-btn: #285893;
-  --pressed-primary-btn: #2E3339;
-  --disabled-primary-btn: #B1B1B1;
-  --color-white: #FFFFFF;
-  --color-red: #D40025;
+  --translucent-dark: rgba(0, 0, 0, 0.19);
+  --dark-white: rgba(255, 255, 255, 0.88);
 }
