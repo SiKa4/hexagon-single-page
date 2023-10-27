@@ -63,7 +63,7 @@ const SpanText = styled.span.attrs({className: 'span-text'})`
   &:hover{
     color: var(--dark-white);
     & ${Icon} {
-      filter: invert(0.8);
+      filter: invert(0.9);
     }
     &::before {
       width: 100%;
@@ -75,10 +75,22 @@ const SpanText = styled.span.attrs({className: 'span-text'})`
 const Wrapper = styled.div.attrs({className: 'header-wrapper'})`
   display: flex;
   position: absolute;
+  overflow: auto;
   width: 94vw;
   padding: 4vh 3vw 2vw;
   align-items: center;
   z-index: 20;
+  background-color: var(--translucent-dark);
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #d9d9d9;
+    border-radius: 8px;
+    border-right: 2px white solid;
+  }
 `;
 
 const BlockCenterSpan = styled.div.attrs({className: 'block-center-span'})`

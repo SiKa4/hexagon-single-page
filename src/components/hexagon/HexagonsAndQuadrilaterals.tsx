@@ -8,11 +8,11 @@ export const HexagonsAndQuadrilaterals = () => {
     const arrayContents = [1, 2, 3, 4, 5];
 
     const arrayPadding = [
-        {top: 39, bottom: 0},
-        {top: 18, bottom: 0},
+        {top: 54, bottom: 0},
+        {top: 26, bottom: 0},
         {top: 0, bottom: 0},
-        {top: 0, bottom: 18},
-        {top: 0, bottom: 39},
+        {top: 0, bottom: 26},
+        {top: 0, bottom: 54},
     ];
 
     const handleScroll = (e : React.WheelEvent) => {
@@ -30,7 +30,6 @@ export const HexagonsAndQuadrilaterals = () => {
         setTimeout(() => {
             setMarginQuadrilateral({left: 0, right: 0})
         }, 500);
-
     }, [index]);
 
 
@@ -63,9 +62,9 @@ HexagonsAndQuadrilaterals.displayName = 'HexagonsAndQuadrilaterals';
 const Quadrilateral = styled.div<{ isTwo?: boolean, margin: { left: number, right: number } }>`
   margin-top: -2vw;
   width: 45vw;
-  height: 13vw;
+  height: 18vw;
   background-color: white;
-  clip-path: polygon(0% 0%, 100% 0%, 91% 50%, 0% 50%);
+  clip-path: polygon(0% 0%, 100% 0%, 88% 50%, 0% 50%);
   transition: margin-left 0.3s ease-in-out, margin-right 0.3s ease-in-out;
 
   ${({isTwo, margin}) => !isTwo && margin && css`
@@ -78,13 +77,13 @@ const Quadrilateral = styled.div<{ isTwo?: boolean, margin: { left: number, righ
     margin-top: -0.6vw;
     width: 42.5vw;
     margin-left: auto;
-    margin-right: ${margin.right}vw;;
+    margin-right: ${margin.right}vw;
   `}
 `;
 
 const Hexagon = styled.div<{ isSelected: boolean, isLast: boolean }>`
-  width: 10vw;
-  height: 8.9vw;
+  width: 14vw;
+  height: 12.4vw;
   background-color: white;
   clip-path: polygon(50% 0%, 75% 0%, 100% 50%, 75% 100%, 50% 100%, 25% 100%, 0% 50%, 25% 0%);
   margin-bottom: 3vw;
@@ -99,13 +98,13 @@ const Hexagon = styled.div<{ isSelected: boolean, isLast: boolean }>`
 
 
   ${({isSelected}) => isSelected && css`
-    width: 16vw;
-    height: 14.5vw;
+    width: 20vw;
+    height: 17.8vw;
   `};
 
   ${({isLast}) => isLast && css`
-    width: 7vw;
-    height: 6vw;
+    width: 11vw;
+    height: 10vw;
   `}
 `;
 
