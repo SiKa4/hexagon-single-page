@@ -3,7 +3,7 @@ import {strings} from "../../assets/strings/strings.ts";
 import {exitIcon, hamburgerMenu} from "../../assets/img.ts";
 
 export const Header = () => {
-
+    //Если нужно сделать навигацию на какую либо страницу то это я могу сделать через react-router-dom
     return (
         <Wrapper>
             <SpanText>{strings.ticketsAndSeasonTickets}</SpanText>
@@ -26,7 +26,7 @@ export const Header = () => {
 Header.displayName = 'Header'
 
 
-const Icon = styled.img<{ isInvert?: boolean }>`
+const Icon = styled.img.attrs({className: 'icon'})<{ isInvert?: boolean }>`
   filter: invert(${props => props.isInvert == true ? 1 : 0});
   transition: filter 0.3s ease-in-out;
   width: 40px;
