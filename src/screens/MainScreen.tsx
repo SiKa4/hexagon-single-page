@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import {Header} from "../components/header/Header.tsx";
-import {HehagonsAndQuadrilaterals} from "../components/hexagon/HexagonsAndQuadrilaterals.tsx";
+import {HexagonsAndQuadrilaterals} from "../components/hexagon/HexagonsAndQuadrilaterals.tsx";
 
 export const MainScreen = () => {
     return (
         <Wrapper>
             <Header/>
-            <HehagonsAndQuadrilaterals/>
+            <HexagonsAndQuadrilaterals/>
         </Wrapper>
     );
 }
