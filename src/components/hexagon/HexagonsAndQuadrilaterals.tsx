@@ -90,7 +90,7 @@ export const HexagonsAndQuadrilaterals = () => {
                     {
                         arrayContents.map((value, i) => (
                             <Hexagon isSelected={index == i}
-                                     isLast={Math.abs(i - index) >= 2}>
+                                     isLast={Math.abs(i - index) >= 2} onClick={() => setIndex(i)}>
                                 <ContentHexagon isSelected={index == i}>
                                     {
                                         index == i &&
